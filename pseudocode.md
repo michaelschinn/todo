@@ -92,32 +92,43 @@ tasks.state [
 
 ```
 addTask(B-1-1){
-   tasks.state.taskList.push(setState({
+    saveState(tasks.state.tasklList, {
        id : new DateTime(),
        completed : false,
        removed : false,
-       textValue : B-1-1
-    });
+       textValue : B-1-1.value
+    })
     B-1-1.value = "";
-    localStorage.setItem("data", tasks.state.taskList)
 });
-
+```
+```
 removeTask(id){
     tasks.state.taskList.map(item => {
         item.id === id && saveState(item.removed, true);
     });
 }
-
+```
+```
 markCompleted(id){
     tasks.state.taskList.map(item => {
         item.id === id && saveState(item.completed, !item.completed);
     });
 }
-
-saveState(key, value){
-    tasks.state.[key].setState(value);
-    localStorage.setItem("data," tasks.state.taskList)
+```
+```
+tabSwitcher(state){
+    saveState(tasks.state.tab, state)
 }
-
-loadState(){}
+```
+```
+saveState(key, value){
+    tasks.state[key].setState(value);
+    localStorage.setItem("data", tasks.state.taskList)
+}
+```
+```
+loadState(key){
+    let data = localStorage.getItem(data)
+    tasks.state[key].setState(data)
+}
 ```
