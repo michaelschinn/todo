@@ -1,0 +1,39 @@
+// color-variables-start
+$blue1:    #5f83ba !default;
+$blue2:    #87a2cb !default;
+$blue1:    #afc1dc !default;
+$orange1:  #bb7138 !default;
+$orange2:  #cc9454 !default;
+$orange3:  #ddb770 !default;
+// color-variables-end
+// colors-map-start
+$colors: (
+    "blue1":       $blue1,
+    "blue2":       $blue2,
+    "blue3":       $blue3,
+    "orange1":     $orange1,
+    "orange2":     $orange2,
+    "orange3":     $orange3
+) !default;
+// colors-map-end
+// theme-color-variables-start
+$primary:       $blue2 !default;
+$secondary:     $orange2 !default;
+
+$primary1:      $blue1 !default;
+$primary2:      $blue2 !default;
+$primary3:      $blue3 !default;
+$secondary1:    $orange1 !default;
+$secondary2:    $orange2 !default;
+$secondary3:    $orange3 !default;
+// theme-color-variables-end
+// theme-color-map-start
+$theme-colors: (
+    "primary1":     $primary1,
+    "primary2":     $primary2,
+    "primary3":     $primary3,
+    "secondary1":   $secondary1,
+    "secondary2":   $secondary2,
+    "secondary3":   $secondary3
+) !default;
+// theme-color-map-end
