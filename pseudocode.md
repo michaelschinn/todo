@@ -94,8 +94,8 @@ tasks.state [
 addTask(B-1-1){
    tasks.state.taskList.push(setState({
        id : new DateTime(),
-       // completed : false,
-       // removed : false,
+       completed : false,
+       removed : false,
        textValue : B-1-1
     });
     B-1-1.value = "";
@@ -103,22 +103,21 @@ addTask(B-1-1){
 });
 
 removeTask(id){
-    if(tasks.state.taskList[index].id === id){
-        tasks.state.tasksList.removed = true;
-        localStorage.setItem("data", tasks.state.taskList)
-    }
+    tasks.state.taskList.map(item => {
+        item.id === id && saveState(item.removed, true);
+    });
 }
 
 markCompleted(id){
     tasks.state.taskList.map(item => {
-        item.completed = !item.completed;
+        item.id === id && saveState(item.completed, !item.completed);
     });
-    localStorage.setItem("data", tasks.state.taskList);
 }
 
 saveState(key, value){
     tasks.state.[key].setState(value);
     localStorage.setItem("data," tasks.state.taskList)
 }
+
 loadState(){}
 ```
