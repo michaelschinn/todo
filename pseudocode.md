@@ -116,11 +116,9 @@ markCompleted(id){
     localStorage.setItem("data", tasks.state.taskList);
 }
 
-setTab(state){
-    tasks.state.tabs.setState(state);
+saveState(key, value){
+    tasks.state.[key].setState(value);
     localStorage.setItem("data," tasks.state.taskList)
 }
-
-saveState(){}
 loadState(){}
 ```
