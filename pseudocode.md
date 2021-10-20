@@ -132,3 +132,27 @@ loadState(key){
     tasks.state[key].setState(data)
 }
 ```
+```
+eventHandler(elmement){
+    elm.addEventListener(e => {
+        switch(e){
+            case: "click"
+                elm === "button" && handelClick(elm);
+                break;
+            case: "keyPress"
+                handleKeypPress(elm)
+                "break"
+        }
+    })
+}
+```
+```
+handleClick(elm){
+
+}
+```
+```
+handleKeyPress(elm){
+
+}
+```
